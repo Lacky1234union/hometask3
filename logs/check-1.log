@@ -1,0 +1,166 @@
+
+Проект hw3-check-yn5cazb2
+ Image hw3-check-yn5cazb2-app Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 548B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 337B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 94B done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.13-slim
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 94B done
+#6 DONE 0.0s
+
+#7 [2/5] WORKDIR /app
+#7 CACHED
+
+#8 [3/5] COPY app/requirements.txt .
+#8 CACHED
+
+#9 [4/5] RUN pip install --no-cache-dir -r requirements.txt     && mkdir /data     && chown 10001:10001 /data
+#9 CACHED
+
+#10 [5/5] COPY app/app.py .
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 writing image sha256:ee18ca0025287ab38c25da0a596149788981feb972a59b2f3d2fdb57b7128099 done
+#11 naming to docker.io/library/hw3-check-yn5cazb2-app done
+#11 DONE 0.0s
+
+#12 resolving provenance for metadata file
+#12 DONE 0.0s
+ Image hw3-check-yn5cazb2-app Built 
+ Network hw3-check-yn5cazb2_default Creating 
+ Volume hw3-check-yn5cazb2_redis-data Creating 
+ Volume hw3-check-yn5cazb2_redis-data Created 
+ Network hw3-check-yn5cazb2_default Created 
+ Container hw3-check-yn5cazb2-redis-1 Creating 
+ Container hw3-check-yn5cazb2-redis-1 Created 
+ Container hw3-check-yn5cazb2-app-1 Creating 
+ Container hw3-check-yn5cazb2-app-1 Created 
+ Container hw3-check-yn5cazb2-redis-1 Starting 
+ Container hw3-check-yn5cazb2-redis-1 Started 
+ Container hw3-check-yn5cazb2-redis-1 Waiting 
+ Container hw3-check-yn5cazb2-redis-1 Healthy 
+ Container hw3-check-yn5cazb2-app-1 Starting 
+ Container hw3-check-yn5cazb2-app-1 Started 
+ Container hw3-check-yn5cazb2-app-1 Waiting 
+ Container hw3-check-yn5cazb2-redis-1 Waiting 
+ Container hw3-check-yn5cazb2-redis-1 Healthy 
+ Container hw3-check-yn5cazb2-app-1 Healthy 
+GET / → {"greeting": "Hello, Docker!", "count": 0, "hostname": "562b12e59320", "storage": "redis"}
+POST /increment → {"greeting": "Hello, Docker!", "count": 1, "hostname": "562b12e59320", "storage": "redis"}
+POST /increment → {"greeting": "Hello, Docker!", "count": 2, "hostname": "562b12e59320", "storage": "redis"}
+POST /increment → {"greeting": "Hello, Docker!", "count": 3, "hostname": "562b12e59320", "storage": "redis"}
+GET / → {"greeting": "Hello, Docker!", "count": 3, "hostname": "562b12e59320", "storage": "redis"}
+ Container hw3-check-yn5cazb2-app-1 Recreate 
+ Container hw3-check-yn5cazb2-app-1 Recreated 
+ Container hw3-check-yn5cazb2-app-1 Starting 
+ Container hw3-check-yn5cazb2-app-1 Started 
+ Container hw3-check-yn5cazb2-app-1 Waiting 
+ Container hw3-check-yn5cazb2-app-1 Healthy 
+GET / → {"greeting": "Hello, Docker!", "count": 3, "hostname": "84febfb344d9", "storage": "redis"}
+ Container hw3-check-yn5cazb2-app-1 Stopping 
+ Container hw3-check-yn5cazb2-app-1 Stopped 
+ Container hw3-check-yn5cazb2-app-1 Removing 
+ Container hw3-check-yn5cazb2-app-1 Removed 
+ Container hw3-check-yn5cazb2-redis-1 Stopping 
+ Container hw3-check-yn5cazb2-redis-1 Stopped 
+ Container hw3-check-yn5cazb2-redis-1 Removing 
+ Container hw3-check-yn5cazb2-redis-1 Removed 
+ Network hw3-check-yn5cazb2_default Removing 
+ Network hw3-check-yn5cazb2_default Removed 
+ Network hw3-check-yn5cazb2_default Creating 
+ Network hw3-check-yn5cazb2_default Created 
+ Container hw3-check-yn5cazb2-redis-1 Creating 
+ Container hw3-check-yn5cazb2-redis-1 Created 
+ Container hw3-check-yn5cazb2-app-1 Creating 
+ Container hw3-check-yn5cazb2-app-1 Created 
+ Container hw3-check-yn5cazb2-redis-1 Starting 
+ Container hw3-check-yn5cazb2-redis-1 Started 
+ Container hw3-check-yn5cazb2-redis-1 Waiting 
+ Container hw3-check-yn5cazb2-redis-1 Healthy 
+ Container hw3-check-yn5cazb2-app-1 Starting 
+ Container hw3-check-yn5cazb2-app-1 Started 
+ Container hw3-check-yn5cazb2-redis-1 Waiting 
+ Container hw3-check-yn5cazb2-app-1 Waiting 
+ Container hw3-check-yn5cazb2-redis-1 Healthy 
+ Container hw3-check-yn5cazb2-app-1 Healthy 
+GET / → {"greeting": "Hello, Docker!", "count": 3, "hostname": "e38817508785", "storage": "redis"}
+ Container hw3-check-yn5cazb2-redis-1 Stopping 
+ Container hw3-check-yn5cazb2-redis-1 Stopped 
+GET /healthz → HTTP 200 (ожидалось 200)
+GET /readyz → HTTP 503 (ожидалось 503)
+POST /increment → HTTP 503 (ожидалось 503)
+ Container hw3-check-yn5cazb2-redis-1 Starting 
+ Container hw3-check-yn5cazb2-redis-1 Started 
+GET / → {"greeting": "Hello, Docker!", "count": 3, "hostname": "e38817508785", "storage": "redis"}
+POST /increment → {"greeting": "Hello, Docker!", "count": 4, "hostname": "e38817508785", "storage": "redis"}
+ Container hw3-check-yn5cazb2-app-1 Stopping 
+ Container hw3-check-yn5cazb2-app-1 Stopped 
+ Container hw3-check-yn5cazb2-redis-1 Stopping 
+ Container hw3-check-yn5cazb2-redis-1 Stopped 
+ Container hw3-check-yn5cazb2-redis-run-a511506a7d39 Creating 
+ Container hw3-check-yn5cazb2-redis-run-a511506a7d39 Created 
+Архив: backups/check-YN5CAzB2/redis.tar
+ Container hw3-check-yn5cazb2-app-1 Stopping 
+ Container hw3-check-yn5cazb2-app-1 Stopped 
+ Container hw3-check-yn5cazb2-app-1 Removing 
+ Container hw3-check-yn5cazb2-app-1 Removed 
+ Container hw3-check-yn5cazb2-redis-1 Stopping 
+ Container hw3-check-yn5cazb2-redis-1 Stopped 
+ Container hw3-check-yn5cazb2-redis-1 Removing 
+ Container hw3-check-yn5cazb2-redis-1 Removed 
+ Volume hw3-check-yn5cazb2_redis-data Removing 
+ Network hw3-check-yn5cazb2_default Removing 
+ Volume hw3-check-yn5cazb2_redis-data Removed 
+ Network hw3-check-yn5cazb2_default Removed 
+ Volume hw3-check-yn5cazb2_redis-data Creating 
+ Network hw3-check-yn5cazb2_default Creating 
+ Volume hw3-check-yn5cazb2_redis-data Created 
+ Network hw3-check-yn5cazb2_default Created 
+ Container hw3-check-yn5cazb2-redis-run-4405d0fee948 Creating 
+ Container hw3-check-yn5cazb2-redis-run-4405d0fee948 Created 
+ Container hw3-check-yn5cazb2-redis-1 Creating 
+ Container hw3-check-yn5cazb2-redis-1 Created 
+ Container hw3-check-yn5cazb2-app-1 Creating 
+ Container hw3-check-yn5cazb2-app-1 Created 
+ Container hw3-check-yn5cazb2-redis-1 Starting 
+ Container hw3-check-yn5cazb2-redis-1 Started 
+ Container hw3-check-yn5cazb2-redis-1 Waiting 
+ Container hw3-check-yn5cazb2-redis-1 Healthy 
+ Container hw3-check-yn5cazb2-app-1 Starting 
+ Container hw3-check-yn5cazb2-app-1 Started 
+ Container hw3-check-yn5cazb2-app-1 Waiting 
+ Container hw3-check-yn5cazb2-redis-1 Waiting 
+ Container hw3-check-yn5cazb2-redis-1 Healthy 
+ Container hw3-check-yn5cazb2-app-1 Healthy 
+GET / → {"greeting": "Hello, Docker!", "count": 4, "hostname": "34033a56ab45", "storage": "redis"}
+POST /increment → {"greeting": "Hello, Docker!", "count": 5, "hostname": "34033a56ab45", "storage": "redis"}
+ Container hw3-check-yn5cazb2-app-1 Stopping 
+ Container hw3-check-yn5cazb2-app-1 Stopped 
+ Container hw3-check-yn5cazb2-app-1 Removing 
+ Container hw3-check-yn5cazb2-app-1 Removed 
+ Container hw3-check-yn5cazb2-redis-1 Stopping 
+ Container hw3-check-yn5cazb2-redis-1 Stopped 
+ Container hw3-check-yn5cazb2-redis-1 Removing 
+ Container hw3-check-yn5cazb2-redis-1 Removed 
+ Volume hw3-check-yn5cazb2_redis-data Removing 
+ Network hw3-check-yn5cazb2_default Removing 
+ Volume hw3-check-yn5cazb2_redis-data Removed 
+ Network hw3-check-yn5cazb2_default Removed 
+Все проверки пройдены. Архив: backups/check-YN5CAzB2/redis.tar
